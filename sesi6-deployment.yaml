@@ -14,18 +14,18 @@ spec:
     spec:
       containers:
       - name: my-app-container
-        image: cyrexian/main.go:1.22.1 
+        image: cyrexian/main.go:1.22.1
         resources:
-          requests: 
+          requests:
             memory: "256Mi"
             cpu: "500m"
-          limits:  
+          limits:
             memory: "512Mi"
             cpu: "1000m"
         ports:
-        - containerPort: 80
+        - containerPort: 8080
   strategy:
     type: RollingUpdate
     rollingUpdate:
-      maxSurge: 1  
+      maxSurge: 1
       maxUnavailable: 1
